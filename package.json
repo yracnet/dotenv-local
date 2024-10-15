@@ -1,20 +1,23 @@
 {
   "name": "dotenv-local",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "description": "A library for loading local environment variables in Vite projects. This library extends Vite's loadenv functionality to prioritize files with a 'local' suffix.",
   "keywords": [
     "vite",
     "vite-plugin",
     "vite-plugin-loadenv",
+    "dotenv",
     "loadenv",
     "loadenv-local",
     "environment-variables",
     "local-development",
     "vite-config",
     "config-management",
+    "node",
     "env",
-    "env-local"
+    "env-local",
+    "load"
   ],
   "files": [
     "dist",
