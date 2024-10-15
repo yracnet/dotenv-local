@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
-    "module": "ESNext",
-    "target": "es2017",
-    "lib": ["ESNext", "DOM"],
+    "module": "CommonJS",
+    "target": "ES2017",
+    "lib": ["ES2017", "DOM"],
     "allowJs": true,
     "esModuleInterop": true,
     "strict": true,
@@ -10,7 +10,10 @@
     "moduleResolution": "Node",
     "resolveJsonModule": true,
     "skipLibCheck": true,
-    "noUnusedParameters": true
+    "noUnusedParameters": true,
+    "outDir": "dist",
+    "declaration": true,
+    "sourceMap": true
   },
   "include": ["src/**/*", "*.d.ts"],
   "exclude": ["node_modules", "example", "dist"]

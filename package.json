@@ -2,7 +2,7 @@
   "name": "dotenv-local",
   "version": "1.0.1",
   "type": "module",
-  "description": "A library for loading local environment variables in Vite projects. This library extends Vite's loadenv functionality to prioritize files with a 'local' suffix.",
+  "description": "A utility library for loading local environment variables with prioritized file loading in Node.js and Vite projects. Extends dotenv functionality for better environment management in various modes like development, production, and testing.",
   "keywords": [
     "vite",
     "vite-plugin",
@@ -17,7 +17,8 @@
     "node",
     "env",
     "env-local",
-    "load"
+    "load",
+    "nodejs"
   ],
   "files": [
     "dist",
@@ -30,22 +31,35 @@
     "type": "git",
     "url": "https://github.com/yracnet/dotenv-local"
   },
-  "main": "dist/index.js",
-  "module": "dist/index.cjs",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "homepage": "https://github.com/yracnet/dotenv-local",
-  "bugs": "https://github.com/yracnet/dotenv-local/issues",
-  "scripts": {
-    "build": "tsup"
+  "bugs": {
+    "url": "https://github.com/yracnet/dotenv-local/issues"
   },
-  "dependencies": {},
+  "scripts": {
+    "build": "tsup",
+    "test": "jest",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "dotenv": "^16.3.1"
+  },
   "peerDependencies": {
     "dotenv": "^16.0.0"
   },
   "devDependencies": {
     "@types/node": "^20.10.4",
-    "dotenv": "^16.3.1",
-    "tsup": "^8.0.1",
-    "typescript": "^5.3.3"
+    "tsup": "^5.0.0",
+    "typescript": "^5.3.3",
+    "jest": "^29.6.1"
+  },
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "funding": {
+    "type": "individual",
+    "url": "https://github.com/sponsors/yracnet"
   }
 }
