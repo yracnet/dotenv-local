@@ -1,6 +1,6 @@
 {
   "name": "dotenv-local",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "type": "module",
   "description": "A utility library for loading local environment variables with prioritized file loading in Node.js and Vite projects. Extends dotenv functionality for better environment management in various modes like development, production, and testing.",
   "keywords": [
@@ -31,23 +31,23 @@
     "type": "git",
     "url": "https://github.com/yracnet/dotenv-local"
   },
-  "main": "dist/index.cjs",
-  "module": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
   "homepage": "https://github.com/yracnet/dotenv-local",
   "bugs": {
     "url": "https://github.com/yracnet/dotenv-local/issues"
   },
   "scripts": {
     "build": "tsup",
-    "test": "jest",
-    "clean": "rm -rf dist"
+    "test": "jest"
   },
   "dependencies": {
     "dotenv": "^16.3.1"
-  },
-  "peerDependencies": {
-    "dotenv": "^16.0.0"
   },
   "devDependencies": {
     "@types/node": "^20.10.4",
